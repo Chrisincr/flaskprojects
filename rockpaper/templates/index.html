@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Rock Paper Scissors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename = 'rockstyle.css')}}">
+</head>
+<body>
+    <div class="container">
+        <form action = '/result' method='post'>
+            <h1>Pick one:</h1>
+            <input type='submit' name='result' id="rock" value="rock">
+            <input type='submit' name='result' id="paper" value="paper">
+            <input type='submit' name='result' id="scissors" value="scissors">
+        </form>
+    </div>
+</body>
+</html>

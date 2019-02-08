@@ -12,7 +12,7 @@ def show_submission():
     subscribe = request.form.get('subscribe','No')
     if subscribe == 'checkedValue':
         subscribe = 'Yes'
-
+    print(request.form)
     return render_template("submission.html",name=request.form["name"],email=request.form['email'],subscribe=subscribe)
 
 

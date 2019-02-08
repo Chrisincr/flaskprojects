@@ -1,0 +1,37 @@
+body{
+    text-align: center;
+    display: inline-block;
+    background-color:#e9ecef;
+}
+img{
+    display: none;
+    width:300px;
+    height:300px;
+    background-size: cover;
+}
+.tophalf{
+    vertical-align: center;
+    text-align: center;
+}
+.jumbotron{
+    display: inline-block;
+    vertical-align: top;
+    width:40vw;
+    
+}
+.topbottom{
+    display: inline-block;
+    width:40vw;
+}
+.topbottom h1{
+    display: inline-block;
+}
+.table{
+    width:30vw;
+    display: inline-block;
+    
+}
+td, th{
+    width:100px;
+    text-align: center;
+}

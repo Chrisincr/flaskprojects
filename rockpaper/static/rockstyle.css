@@ -1,0 +1,26 @@
+.container{
+    background-color: aquamarine;
+    min-height:400px;
+}
+.container input{
+    width:300px;
+    height:300px;
+    background-size: cover;
+    display: inline-block;
+}
+.container form{
+    margin:auto;
+    margin-top:100px;
+}
+.container form input{
+    margin-right:50px;;
+}
+#rock{
+    background-image: url('/static/rock.jpg');
+}
+#paper{
+    background-image: url('/static/paper.jpg');
+}
+#scissors{
+    background-image: url('/static/scissors.jpg');
+}  

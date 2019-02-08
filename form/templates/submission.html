@@ -11,9 +11,25 @@
   </head>
   <body>
         <h1>This is your submission!</h1>
-        {{name}}
-        {{email}}
-        {{subscribe}}
+
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th>Name</th>
+              <th>email</th>
+              <th>Subscribe to Newsletter</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">{{name}}</td>
+              <td>{{email}}</td>
+              <td>{{subscribe}}</td>
+            </tr>
+            
+          </tbody>
+        </table>
+        
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

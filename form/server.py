@@ -8,8 +8,14 @@ def index():
 
 @app.route('/results', methods=['POST'])
 def show_submission():
-    print({request.form})
-    return render_template("submission.html",name=request.form["name"],email=request.form['email'],subscribe=request.form['subscribe'])
+    print(request.form)
+    
+    subscribe = request.form.get('subscribe','No')
+    if subscribe == 'checkedValue':
+        subscribe = 'Yes'
+
+    
+    return render_template("submission.html",name=request.form["name"],email=request.form['email'],subscribe=subscribe)
 
 
 

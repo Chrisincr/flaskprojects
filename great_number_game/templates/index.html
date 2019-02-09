@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Great Number Game</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='gNG.css') }}">
+</head>
+<body>
+    
+    <div class="jumbotron text-center">
+        <h1 class="display-3">Welcome to the Great Number Game!</h1>
+        <p class="lead">I am thinking of a number between 1 and 100</p>
+        <hr class="my-2">
+        <p class="winOff">Take a guess!</p>
+        <div class="guess_result winOff" id="High"><p>Too High</p></div>
+        <div class="guess_result winOff" id="Low">Too Low</div>
+        
+        <form action="/results" method="post">
+
+            <div class="form-group winOff">
+                <label for="guess">Your Guess {{guesses}}</label>
+                <input type="text" class="form-control" name="guess" id="guess" aria-describedby="helpId" placeholder="Try to guess the number" aria-hidden="true"></i>
+                <small id="helpId" class="form-text text-muted">Make it a good guess</small>
+            </div>
+            <button type="submit" class="btn btn-primary winOff">Guess</button>
+        </form>
+        <div class='winDiv winOn'>
+            <p>{{guess}} was the number! It took {{guesses}} guesses.</p>
+            <a href="/reset" class="btn btn-danger winOn">Play Again</a>
+        </div>
+        
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+    <script>
+        if ('{{victory}}' == 'True'){
+            let doc =document.getElementsByClassName('winOff')
+    
+            for (let i = 0; i<doc.length; i++){
+                doc[i].style.display = 'none'
+            }
+            doc =document.getElementsByClassName('winOn')
+    
+            for (let i = 0; i<doc.length; i++){
+                doc[i].style.display = 'inline-block'
+            }
+
+        }
+        else{
+            tempVar = '{{difference}}'
+            if (tempVar > ''){
+                document.getElementById('{{difference}}').style['display'] = 'inline-block'
+            }
+            
+            
+        }
+        
+    
+    </script>
+</body>
+</html>

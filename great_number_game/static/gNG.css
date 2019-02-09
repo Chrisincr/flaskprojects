@@ -1,0 +1,25 @@
+.guess_result{
+    display: none;
+    width: 100px;
+    height: 100px;
+    background-color: darkred;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+}
+.winDiv{
+    background-color: lightgreen;
+    color: white;
+    height: 200px;
+    width: 200px;
+}
+
+.winDiv p{
+    font-size: 1.5em;
+    color: black;
+    margin: 10px 0px;
+}
+
+.winOn{
+    display: none;
+}
